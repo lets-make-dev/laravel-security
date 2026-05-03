@@ -32,7 +32,7 @@ class SecurityServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/security.php' => config_path('security.php'),
-        ], 'make-dev-security');
+        ], 'make-dev-laravel-security');
 
         $this->registerCspReportRoute();
         $this->registerSriReportRoute();

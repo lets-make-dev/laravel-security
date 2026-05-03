@@ -1,5 +1,5 @@
 {
-    "name": "make-dev/security",
+    "name": "make-dev/laravel-security",
     "description": "Security headers for Laravel: HSTS, CSP, Permissions-Policy, X-Content-Type-Options, and Subresource Integrity (SRI) with built-in violation reporting endpoints.",
     "keywords": [
         "laravel",

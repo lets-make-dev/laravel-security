@@ -17,7 +17,7 @@ class SecurityInstall extends Command
     protected $signature = 'security:install
         {--force : Overwrite an existing config/security.php without prompting}';
 
-    protected $description = 'Interactive setup wizard for make-dev/security.';
+    protected $description = 'Interactive setup wizard for make-dev/laravel-security.';
 
     /**
      * Curated CSP directive contributions for common third-party integrations.
@@ -195,7 +195,7 @@ class SecurityInstall extends Command
 
     public function handle(): int
     {
-        info('make-dev/security setup wizard');
+        info('make-dev/laravel-security setup wizard');
         note(
             "This wizard generates a config/security.php tailored to your app.\n"
             ."Re-run any time. Existing config is backed up before overwrite."

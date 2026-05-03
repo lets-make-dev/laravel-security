@@ -1,7 +1,9 @@
-# make-dev/security
+# Laravel Security
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/make-dev/security.svg?style=flat-square)](https://packagist.org/packages/make-dev/security)
-[![License](https://img.shields.io/packagist/l/make-dev/security.svg?style=flat-square)](https://packagist.org/packages/make-dev/security)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/make-dev/laravel-security.svg?style=flat-square)](https://packagist.org/packages/make-dev/laravel-security)
+[![License](https://img.shields.io/packagist/l/make-dev/laravel-security.svg?style=flat-square)](https://packagist.org/packages/make-dev/laravel-security)
+
+> Composer package: `make-dev/laravel-security` · PHP namespace: `MakeDev\Security`
 
 A drop-in security headers package for Laravel that ships sensible defaults for HSTS, Content Security Policy (with per-request nonces and `'strict-dynamic'`), X-Content-Type-Options, Permissions-Policy, and Subresource Integrity — plus first-party endpoints for receiving CSP and SRI violation reports. Supports Laravel 11, 12, and 13 on PHP 8.2 – 8.5.
 
@@ -26,7 +28,7 @@ Header-only middlewares register globally (via the HTTP kernel), so they cover 4
 ## Installation
 
 ```bash
-composer require make-dev/security
+composer require make-dev/laravel-security
 ```
 
 The service provider is auto-discovered. The fastest way to get a tailored config is the interactive setup wizard:
@@ -42,7 +44,7 @@ The wizard walks you through each header, explains the trade-offs (with brief pr
 Prefer to start from the defaults and edit by hand? Publish the stock config:
 
 ```bash
-php artisan vendor:publish --tag=make-dev-security
+php artisan vendor:publish --tag=make-dev-laravel-security
 ```
 
 Either way, migrations for the `csp_reports` and `sri_reports` tables are auto-loaded (no publish required) and run on the next `php artisan migrate` if DB persistence is enabled.
