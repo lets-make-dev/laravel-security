@@ -1,0 +1,42 @@
+{
+    "name": "make-dev/security",
+    "description": "Security headers for Laravel: HSTS, CSP, Permissions-Policy, X-Content-Type-Options, and Subresource Integrity (SRI) with built-in violation reporting endpoints.",
+    "keywords": [
+        "laravel",
+        "security",
+        "security-headers",
+        "csp",
+        "content-security-policy",
+        "hsts",
+        "sri",
+        "subresource-integrity",
+        "permissions-policy"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Michael Craig",
+            "email": "m@ke.dev"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MakeDev\\Security\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2 || ^8.3 || ^8.4 || ^8.5",
+        "illuminate/console": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/http": "^11.0 || ^12.0 || ^13.0",
+        "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+        "laravel/prompts": "^0.1 || ^0.2 || ^0.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MakeDev\\Security\\SecurityServiceProvider"
+            ]
+        }
+    }
+}
