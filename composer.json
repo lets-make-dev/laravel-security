@@ -1,16 +1,24 @@
 {
     "name": "make-dev/laravel-security",
-    "description": "Security headers for Laravel: HSTS, CSP, Permissions-Policy, X-Content-Type-Options, and Subresource Integrity (SRI) with built-in violation reporting endpoints.",
+    "description": "Modern security headers for Laravel — turn-key. Strict CSP with per-request nonces and 'strict-dynamic', Subresource Integrity with smart noise filtering, HSTS, Permissions-Policy. An interactive setup wizard asks which third parties you use (GTM, HubSpot, Stripe, reCAPTCHA, and a dozen more) and wires the right directives automatically. First-party violation reporting endpoints, Filament + Livewire + Vite friendly, Vapor-ready. Laravel 11, 12, 13 on PHP 8.2+.",
     "keywords": [
         "laravel",
+        "laravel-package",
         "security",
         "security-headers",
         "csp",
         "content-security-policy",
+        "strict-csp",
+        "strict-dynamic",
+        "nonce",
+        "xss-protection",
         "hsts",
         "sri",
         "subresource-integrity",
-        "permissions-policy"
+        "permissions-policy",
+        "filament",
+        "livewire",
+        "vapor"
     ],
     "license": "MIT",
     "type": "library",
