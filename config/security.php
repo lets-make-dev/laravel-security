@@ -226,11 +226,44 @@ return [
 
             'frame-src' => ["'self'"],
 
+            // Who may embed THIS site in a frame (anti-clickjacking). Note this
+            // is only enforced when csp.report_only is false; the X-Frame-Options
+            // header below is the actively-enforced equivalent during rollout.
+            'frame-ancestors' => ["'self'"],
+
             'object-src' => ["'none'"],
 
             'base-uri' => ["'self'"],
 
         ],
+
+    ],
+
+    'frame_options' => [
+
+        /*
+        |--------------------------------------------------------------------------
+        | Enable X-Frame-Options
+        |--------------------------------------------------------------------------
+        |
+        | Toggle the X-Frame-Options header on or off. This is the anti-clickjacking
+        | control that is honored by browsers regardless of CSP report-only mode,
+        | so it remains effective while the CSP frame-ancestors directive is still
+        | rolling out in report-only.
+        |
+        */
+        'enabled' => true,
+
+        /*
+        |--------------------------------------------------------------------------
+        | Value
+        |--------------------------------------------------------------------------
+        |
+        | SAMEORIGIN allows the site to frame its own pages (admin embeds, etc.)
+        | while blocking cross-origin framing. Use DENY to forbid all framing.
+        |
+        */
+        'value' => 'SAMEORIGIN',
 
     ],
 

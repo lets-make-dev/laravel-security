@@ -8,6 +8,7 @@ use MakeDev\Security\Console\Commands\SriWarm;
 use MakeDev\Security\Http\Controllers\CspReportController;
 use MakeDev\Security\Http\Controllers\SriReportController;
 use MakeDev\Security\Http\Middleware\ContentSecurityPolicy;
+use MakeDev\Security\Http\Middleware\FrameOptions;
 use MakeDev\Security\Http\Middleware\PermissionsPolicy;
 use MakeDev\Security\Http\Middleware\StrictTransportSecurity;
 use MakeDev\Security\Http\Middleware\SubresourceIntegrity;
@@ -61,6 +62,7 @@ class SecurityServiceProvider extends ServiceProvider
         $kernel->pushMiddleware(ContentSecurityPolicy::class);
         $kernel->pushMiddleware(XContentTypeOptions::class);
         $kernel->pushMiddleware(PermissionsPolicy::class);
+        $kernel->pushMiddleware(FrameOptions::class);
 
         // SRI rewrites HTML and only makes sense for matched web routes.
         $kernel->appendMiddlewareToGroup('web', SubresourceIntegrity::class);
